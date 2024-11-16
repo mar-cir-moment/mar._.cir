@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
 
 <head> 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>marvin's website :3</title> 
     <style>
         body {
@@ -26,6 +28,7 @@
 	    flex-direction: column;
 	    position: relative;
 	    margin-top: 40px;
+		transition: transform 0.3s ease, opacity 0.3s ease; //for making it go poof
         }
 	
 	.taskbar {
@@ -65,27 +68,60 @@
         p.small {
             font-size: 16px;
         }
+		
+		
+		@keyframes shrinkage{ /* for making the box get smaller and be GONE */
+			0% {
+			transform: scale(1);
+			opacity: 1;
+			}
+			100% {
+			transform: scale(0);
+			opacity: 0;
+			} /* obviuos what the code does i hope */ }
+		
+		.shrinking {
+		animation: shrinkage 0.5s forwards; /* "forwards" makes it stay in final form :3 */
+		}
+		
     </style>
 </head>
 
 <body> 
-<div class="gray-box">
-    <div class="taskbar">
-        <span class="title">Hello!!! ^w^.txt</span>
-        <button class="close-btn">X</button>
-    </div>
-    <h1>Yooooo no way hello!! :3</h1> 
-    <p>this must be a paragraph (maybe)</p> 
 
-    <p class="large">
-	This text is like the previous one but bigger!!!
-    </p>
-    <p class="small">
-	This text is like the previous one but smaller :(
-    </p>
-</div>
+	<div class="gray-box" id= "grayBox">
+		<div class="taskbar">
+			<span class="title">Hello!!! ^w^.txt</span>
+			<button id="closeBtn" class="close-btn"> X </button>
+		</div>
+		<h1>Yooooo no way hello!! :3</h1> 
+		<p>this must be a paragraph (maybe)</p> 
+
+		<p class="large">
+		This text is like the previous one but bigger!!!
+		</p>
+		<p class="small">
+		This text is like the previous one but smaller :(
+		</p>
+	</div>
+
+
+<!-- javascript from now on :( -->
+<script>
+
+document.getElementById('closeBtn').addEventListener('click', function(){
+	document.getElementById('grayBox').classList.add('shrinking');
+
+	setTimeout(function(){
+		document.getElementById('grayBox').style.display = 'none'; //Makes the gray box gone frfr instead of making it 0 opacity
+	}, 500);
+
+
+});
+
+</script>
+
 </body> 
-
 </html>
 
 
