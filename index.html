@@ -20,13 +20,44 @@
             color: #f0f0f0; /* text color */
             padding: 24px; /* padding inside the box since outside one is irrelevant */
             border-radius: 10px; /* the circular corner thingy's pixels */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* shadow for cool depth */
-            text-align: center; /* text aligned in center */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* shadow for cool depth */
+            text-align: center;
+	    display: flex;
+	    flex-direction: column;
+	    position: relative;
+	    margin-top: 40px;
         }
-        p {
-            margin: 10px 0;
-        }
-        p.large {
+	
+	.taskbar {
+		background-color: #ffffff; /* its just white */
+		color: #000000; /* its just black */
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		top: -20px;
+		left: 0;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	.taskbar .title{
+		margin: 8px;
+	}
+
+	.taskbar .close-btn {
+		background-color: transparent;
+		border: none;
+		color: #ff0000;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	
+	p {
+		margin: 10px 0;
+	}
+	p.large {
             font-size: 32px;
         }
         p.small {
@@ -36,17 +67,23 @@
 </head>
 
 <body> 
-    <div class="gray-box">
-        <h1>Yooooo no way hello!! :3</h1> 
-        <p>this must be a paragraph text that's purple (maybe)</p> 
-
-        <p class="large">
-            This text is like the previous one but bigger!!!
-        </p>
-        <p class="small">
-            This text is like the previous one but smaller :(
-        </p>
+<div class="gray-box">
+    <div class="taskbar">
+        <span class="title">Hello!!! ^w^.txt</span>
+        <button class="close-btn">X</button>
     </div>
+    <h1>Yooooo no way hello!! :3</h1> 
+    <p>this must be a paragraph (maybe)</p> 
+
+    <p class="large">
+	This text is like the previous one but bigger!!!
+    </p>
+    <p class="small">
+	This text is like the previous one but smaller :(
+    </p>
+</div>
 </body> 
 
 </html>
+
+
