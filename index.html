@@ -24,11 +24,11 @@
             border-radius: 2px; /* the circular corner thingy's pixels */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* shadow for cool depth */
             text-align: center;
-	    display: flex;
-	    flex-direction: column;
-	    position: relative;
-	    margin-top: 40px;
-		transition: transform 0.3s ease, opacity 0.3s ease; //for making it go poof
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			margin-top: 40px;
+			transition: transform 0.3s ease, opacity 0.3s ease; //for making it go poof
         }
 	
 	.taskbar {
@@ -50,6 +50,7 @@
 	}
 
 	.taskbar .close-btn {
+		font-family: 'Tahoma', sans-serif;
 		background-color: c0c0c0;
 		border: 1px solid #404040;
 		color: black;
@@ -58,7 +59,7 @@
 		cursor: pointer;
 		margin-right: 10px;
 		font-weight: bold;
-		padding: 5px 10px;
+		padding: 2px 7px;
 		box-shadow: 1px 1px 0 #808080, -1px -1px 0 #FFFFFF;
 		text-align: center;
         display: inline-block;		
@@ -70,6 +71,7 @@
 	}
 	
 	p {
+		font-family: 'Tahoma', sans-serif;
 		margin: 10px 0;
 	}
 	p.large {
@@ -123,7 +125,7 @@ document.getElementById('closeBtn').addEventListener('click', function(){
 	document.getElementById('grayBox').classList.add('shrinking');
 
 	setTimeout(function(){
-		document.getElementById('grayBox').style.display = 'none'; //Makes the gray box gone frfr instead of making it 0 opacity
+		document.getElementById('grayBox').style.display = 'none'; //Makes the gray box gone frfr instead of making it 0% opacity and 0% size
 	}, 500);
 
 
@@ -132,4 +134,5 @@ document.getElementById('closeBtn').addEventListener('click', function(){
 </script>
 
 </body> 
+
 </html>
