@@ -75,12 +75,17 @@
 		margin: 10px 0;
 	}
 	p.large {
-            font-size: 32px;
-        }
-        p.small {
-            font-size: 16px;
-        }
-		
+        font-size: 32px;
+    }
+    p.small {
+        font-size: 16px;
+    }
+	p.grad {
+	background: linear-gradient(to left, #9922ff, #00ffec);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+	}
 		
 		@keyframes shrinkage{ /* for making the box get smaller and be GONE */
 			0% {
@@ -107,10 +112,10 @@
 			<button id="closeBtn" class="close-btn"> X </button>
 		</div>
 		<h1>Yooooo no way hello!! :3</h1> 
-		<p>this must be a normal text (maybe)</p> 
+		<p class="grad">this must be a normal text with gradient :D (i hope)</p> 
 
 		<p class="large">
-		This text is like the previous one but bigger!!!
+		This text is like the previous one but bigger <br> and without the gradient!!!
 		</p>
 		<p class="small">
 		This text is like the previous one but smaller :(
